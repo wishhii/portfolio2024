@@ -1,0 +1,24 @@
+/* Pretendard */
+@font-face {
+    font-family: "Pretendard Variable";
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: swap;
+    src: url("./PretendardVariable.woff2") format("woff2-variations");
+}
+
+/* Nexa */
+@font-face {
+    font-family: "Nexa";
+    font-weight: 700;
+    font-display: swap;
+    src: local("Nexa-Heavy"), url(./Nexa-Heavy.woff) format("woff"), url(./Nexa-Heavy.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Nexa";
+    font-weight: 200;
+    font-display: swap;
+    src: local("Nexa-ExtraLight"), url(./Nexa-ExtraLight.woff) format("woff"),
+        url(./Nexa-ExtraLight.ttf) format("truetype");
+}

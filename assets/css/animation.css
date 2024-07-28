@@ -1,0 +1,9 @@
+/* textFadeUp */
+[data-ani="textFadeUp"] {
+    overflow: hidden;
+}
+[data-ani="textFadeUp"] span {
+    display: block;
+    padding: 0.5rem 0;
+    transform: translateY(100%);
+}

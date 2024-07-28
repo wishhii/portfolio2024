@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>so-highlight | 포트폴리오</title>
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25,100..1000&display=swap"
+            rel="stylesheet"
+        />
+        <!-- css -->
+        <link rel="stylesheet" href="../../assets/css/reset.css" />
+        <link rel="stylesheet" href="../../assets/fonts/font.css" />
+        <link rel="stylesheet" href="../../assets/css/common.css" />
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/animation.css" />
+        <!-- Load library -->
+        <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+        <!-- script -->
+        <script type="module" src="../../assets/js/page-toyproject.js" defer></script>
+        <script type="module" src="../../assets/js/utils/cursor.js" defer></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header-inner">
+                <h1 class="logo">
+                    <a href="/"><span class="screen-out">so-highlight</span></a>
+                </h1>
+                <div class="floating-text">
+                    <span class="light-dot"></span>
+                    <p>Exploring to find something I like..</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <article id="toy__title" class="inner-h30">
+                <a class="btn-goback" href="#"
+                    ><span><span>Go Back</span></span></a
+                >
+                <div class="summary flex-column flex-center">
+                    <div class="period">2022</div>
+                    <div class="title">바디토리: 건강기록 및 병원추천 AI 웹 서비스</div>
+                    <div class="link">
+                        <a href="https://github.com/hihisohi/bodytory" target="_blank"
+                            ><span class="icon icon-github"></span>Github</a
+                        >
+                        <a
+                            href="https://limelbe.tistory.com/category/%EC%82%AC%EC%9D%B4%EB%93%9C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%F0%9F%A9%BA%20%EB%B0%94%EB%94%94%ED%86%A0%EB%A6%AC%20%3A%20%EA%B1%B4%EA%B0%95%EA%B8%B0%EB%A1%9D%20%EB%B0%8F%20%EB%B3%91%EC%9B%90%EC%B6%94%EC%B2%9C%20%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4"
+                            target="_blank"
+                            ><span class="icon icon-blog"></span>Blog</a
+                        >
+                    </div>
+                    <div class="desc">
+                        <p>
+                            음성인식을 통해 매일 나의 몸 <strong>건강상태를 간편하게 기록</strong>하고, 기록된
+                            <strong>증상을 기반으로 병원을 추천</strong>해주는 건강관리 웹 서비스입니다.
+                        </p>
+                        <p>
+                            또한, 병원과의 연계를 통해 <strong>손쉬운 기록 공유 및 진료내역 관리</strong>도 가능합니다.
+                        </p>
+                    </div>
+                    <div class="thumb">
+                        <div class="thumb-bg">
+                            <img src="../../assets/images/toyproject/bodytory/thumbnail.png" alt="" />
+                        </div>
+                        <div class="thumb-video">
+                            <div id="player"></div>
+                            <script>
+                                var tag = document.createElement("script");
+
+                                tag.src = "https://www.youtube.com/iframe_api";
+                                var firstScriptTag = document.getElementsByTagName("script")[0];
+                                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                                var player;
+                                function onYouTubeIframeAPIReady() {
+                                    player = new YT.Player("player", {
+                                        videoId: "v1HY-c_d_4U",
+                                        playerVars: {},
+                                        events: { onReady: onPlayerReady },
+                                    });
+                                }
+
+                                function onPlayerReady(event) {
+                                    event.target.setVolume(0);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <p>사용기술</p>
+                        <ul>
+                            <li>TypeScript, JavaScript, Next.js, Flask</li>
+                            <li>Recoil, React-Query, styled-components, React Hook Form, Framer Motion</li>
+                            <li>PlanetScale, Prisma, CloudFlare</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article id="toy__role" class="inner-h30">
+                <div class="tit">SOHI's WORK IN PROJECT</div>
+                <div class="role-wrapper">
+                    <div class="role-box">
+                        <div>
+                            <strong>프론트엔드</strong>
+                            <ul>
+                                <li class="btn-scroll-to" data-scroll-btn="to-01">
+                                    Rechart.js를 활용하여 유저의 최근 건강기록 통계를 확인할 수 있는 대시보드 구현
+                                </li>
+                                <li class="btn-scroll-to" data-scroll-btn="to-02">
+                                    SVG를 사용해 신체부위별 버튼을 직관적인 UI로 구현
+                                </li>
+                                <li class="btn-scroll-to" data-scroll-btn="to-03">
+                                    건강 기록 리스트 UI 구현 및 기록별 필터링, 키워드 필터링 기능 구현
+                                </li>
+                                <li class="btn-scroll-to" data-scroll-btn="to-03">
+                                    모달창을 통한 기록의 수정, 삭제 기능 구현
+                                </li>
+                                <li>lottie를 활용하여 대표 캐릭터, 로딩 등의 애니메이션 최적화</li>
+                                <li>모달, 페이지 전환 등에 Farmer Motion을 적용하여 부드럽고 감각적인 UX 구현</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="role-box">
+                        <div>
+                            <strong>기획 / 디자인</strong>
+                            <ul>
+                                <li>
+                                    전체 서비스 기획
+                                    <a href="https://limelbe.tistory.com/261" target="_blank">서비스 기획 과정 보기</a>
+                                </li>
+                                <li>와이어 프레임, 스타일 가이드 제작</li>
+                                <li>
+                                    웹 &amp; 모바일 디자인
+                                    <a
+                                        href="https://www.figma.com/file/nQIqKRwVVivqMpS2AuUDzV/%EB%94%94%EC%9E%90%EC%9D%B8?t=MJPF8x4VVjgNlrj6-6"
+                                        target="_blank"
+                                        >디자인 작업물 보기 (Figma)</a
+                                    >
+                                </li>
+                                <li>대표 캐릭터 디자인 및 lottie 제작</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>인공지능 / 데이터분석</strong>
+                            <ul>
+                                <li>"서울대학교병원 N의학정보" 크롤링하여 데이터 분석 및 전처리</li>
+                                <li>KR-WordRank 라이브러리를 활용한 한국어 키워드 추출 함수 구현</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="toy__detail" class="inner-h30">
+                <div class="detail-content grid-4">
+                    <div class="grid-row row-tit" data-scroll-cnt="to-02">
+                        <div class="col col-4">
+                            <p>1. 간편하고 직관적인 "오늘 기록하기"</p>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/record01.gif" alt="" />
+                            </div>
+                        </div>
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/record02.gif" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-row mb-20">
+                        <div class="col col-4">
+                            <p class="mb-2">
+                                기록할 신체부위를 선택하는 과정에서 신체 모형 SVG를 버튼으로 활용하여 직관적인 UI를
+                                구현하였습니다.
+                            </p>
+                            <p>
+                                ETRI(한국전자통신연구원)에서 제공하는 한국어 음성인식 API를 활용하여 사용자가 간편하게
+                                음성으로 오늘의 건강상태를 기록할 수 있습니다.
+                            </p>
+                            <p>
+                                마이크를 사용하기 어렵거나 마이크가 정상적으로 동작되지 않을 경우 키보드를 통한 텍스트를
+                                입력이 가능하도록 구현하였습니다.
+                            </p>
+                            <p class="mb-2">
+                                인식된 음성을 사용자에게 텍스트로 보여주는 확인 과정을 통해 음성인식이 제대로 되지
+                                않았거나 수정이 필요한 경우 내용을 수정할 수 있습니다.
+                            </p>
+                            <p>추가로 사진을 업로드하여 오늘의 건강상태에 대해 보다 정확한 기록을 남길 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="grid-row row-tit" data-scroll-cnt="to-01">
+                        <div class="col col-4">
+                            <p>2. 나의 건강상태를 한눈에 파악할 수 있는 "기록 확인하기"</p>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/dashboard.gif" alt="" />
+                            </div>
+                        </div>
+                        <div class="col col-2">
+                            <p>
+                                딥러닝 모델을 통해 기록된 건강상태를 분석하여 사용자에게 적합한 진료과목을 추천합니다.
+                            </p>
+                            <p class="mb-2">
+                                내 주변의 병원 중 추천받은 진료과목이 있는 병원을 지도를 통해 확인할 수 있습니다.
+                            </p>
+                            <p class="mb-2">
+                                KRWordRank 라이브러리를 활용하여 사용자가 기록한 증상에서 자주 등장하는 키워드를 추출한
+                                뒤 최근 건강상태를 분석한 결과를 Recharts.js를 활용해 효과적으로 시각화하여
+                                구현하였습니다.
+                            </p>
+                            <p>
+                                우측 신체모형 네비게이터를 통해 기록을 확인하고 싶은 부위의 기록 리스트 페이지로 이동할
+                                수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-row mb-20" data-scroll-cnt="to-03">
+                        <div class="col col-2">
+                            <p class="mb-2">
+                                신체부위별로 사용자가 기록한 건강상태 기록과, 병원에서 작성한 진료내역을 통합하여
+                                시간순서대로 나열한 리스트를 구현하였습니다. 리스트 우측 상단의 체크 버튼을 통해 사용자
+                                기록과 병원 기록을 구분하여 필터링할 수 있습니다.
+                            </p>
+                            <p class="mb-2">
+                                딥러닝을 모델을 통해 추출된 키워드를 클릭하면 해당 키워드가 포함된 기록만 필터링하여 볼
+                                수 있습니다.
+                            </p>
+                            <p>
+                                사용자가 등록한 기록에 한해서 해당 기록을 클릭하여 모달창을 통해 기록의 수정, 삭제가
+                                가능합니다.
+                            </p>
+                            <p>기록에 사진을 업로드하거나 수정, 삭제할 수 있습니다.</p>
+                        </div>
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/list.gif" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-row row-tit">
+                        <div class="col col-4">
+                            <p>3.연계된 병원을 손쉽게 관리하는 "내 병원 관리하기"</p>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/search.gif" alt="" />
+                            </div>
+                        </div>
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/map.gif" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-row mb-20">
+                        <div class="col col-4">
+                            <p class="mb-2">
+                                건강보험심사평가원에서 제공하는 전국 병의원 및 약국 현황 데이터를 활용하여 해당 데이터
+                                내에 존재하는 모든 병원들과 연계하여 바디토리 서비스를 제공한다고 가정하였습니다.
+                            </p>
+                            <p>
+                                원하는 병원 이름 혹은 주소를 검색하거나 지도를 통해 내 주변을 기준으로 병원을 탐색할 수
+                                있습니다. 검색된 병원에 대한 주소, 홈페이지, 진료과목 등 간략한 정보를 제공합니다.
+                            </p>
+                            <p>검색한 병원을 내 병원 목록에 추가하거나 내 병원목록에서 삭제할 수 있습니다.</p>
+                            <p>
+                                내 병원으로 추가된 병원에게는 진료 참고용으로 나의 기록을 공유할 수 있고 이를 위해
+                                개인정보 수집 동의를 받습니다.
+                            </p>
+                            <p class="mb-2">기록 공유 여부는 추후 "내 병원관리하기"에서 공유를 해제할 수 있습니다.</p>
+                            <p>
+                                내 병원 목록에서 진료내역 보기를 클릭하면 해당 병원에서 작성해준 과거의 진료내역들을
+                                확인하고 관리할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/h_login.gif" alt="" />
+                            </div>
+                        </div>
+                        <div class="col col-2">
+                            <p>
+                                추후 바디토리 서비스가 사용자의 건강상태 기록 서비스에 그치지않고 전국의 병원에서 환자
+                                정보 관리를 위한 시스템으로 확장된다는 가정하에 바디토리 서비스와 연계된 병원에서
+                                사용하는 병원 관리자 전용 페이지 또한 구현하였습니다.
+                            </p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="col col-2">
+                            <div class="img-box">
+                                <img src="../../assets/images/toyproject/bodytory/h_userlist.gif" alt="" />
+                            </div>
+                        </div>
+                        <div class="col col-2">
+                            <p class="mb-2">날짜 별로 내원 예정인 환자 목록을 확인할 수 있습니다.</p>
+                            <p class="mb-2">
+                                기록 공유를 동의한 환자에 한하여 환자의 간단한 인적사항과 공유한 기록들을 조회할 수
+                                있습니다.
+                            </p>
+                            <p>
+                                환자 진료 후 진단결과, 처방내용, 상세소견을 의사가 직접 입력하여 환자에게 공유되도록
+                                구현하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-center">
+                    <a class="btn-goback" href="#"
+                        ><span><span>Go Back</span></span></a
+                    >
+                </div>
+            </article>
+        </main>
+
+        <footer id="footer" class="">
+            <div class="footer-inner">
+                <div class="copyright">so-highlight &copy; 2024</div>
+                <div class="links">
+                    <a href="https://github.com/hihisohi" target="_blank">Github</a>
+                    <a href="https://limelbe.tistory.com/" target="_blank">Blog</a>
+                    <span class="light-dot"></span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
