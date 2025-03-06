@@ -7,7 +7,7 @@ import {
   getShuffleArrayBetween,
 } from "./utils/utils.js";
 
-const URL = `http://127.0.0.1:5500`;
+const URL = `https://wishhii.github.io/portfolio2024`;
 const IMAGE_DIR = `${URL}/assets/images`;
 
 document.addEventListener("DOMContentLoaded", (event) => {
