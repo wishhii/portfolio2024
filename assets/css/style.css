@@ -548,17 +548,20 @@
 }
 
 #sect__projects .reverse .rail-item.rail-img .item-img {
+  position: relative;
+  z-index: 1;
   box-shadow: -0.6rem 0.6rem 2rem rgba(9, 66, 146, 0.15);
 }
 
 #sect__projects .rail-item.rail-img:hover .item-img {
-  transform: scale(1.08) skew(4deg, -1deg);
+  z-index: 10;
+  transform: scale(1.3) skew(4deg, -1deg);
   border-radius: 2rem;
-  box-shadow: 0.6rem 0.6rem 2rem rgba(9, 66, 146, 0.2);
+  box-shadow: 0.6rem 0.6rem 2rem rgba(9, 66, 146, 0.4);
 }
 
 #sect__projects .reverse .rail-item.rail-img:hover .item-img {
-  transform: scale(1.08) skew(-4deg, -1deg);
+  transform: scale(1.3) skew(-4deg, -1deg);
 }
 
 /* 
